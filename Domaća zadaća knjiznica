@@ -1,0 +1,20 @@
+select * from mjesto;
+
+select * from mjesto where sifra=67121;
+
+#autori za koje ne znamo datum ro?enja 
+select *from autor where datumrodenja is unknown;
+
+#dodavanje sebe kao autora
+insert into autor (sifra, ime, prezime, datumRodenja) values
+(56987,'Filip', 'Stamenkovi?', '1991-12-03');
+ 
+#odabir autora koji imaju moj datum ro?enja
+select * from autor where datumrodenja like '%1991-12-03%';
+
+#odabir autora koji imaju isto ime
+select * from autor where ime='Filip';
+
+#odabir izdava?a koji su d.o.o.
+select * from izdavac where naziv like '%d.o.o.%';
+
